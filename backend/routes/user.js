@@ -177,6 +177,29 @@ router.get('/bulk',async(req,res)=>{
 
 })
 
+router.get('/getuser',authMiddleware,async(req,res)=>{
+         
+      const result=await User.findOne({_id:req.userId});
+      console.log(result);
+      if(!result){
+         return res.json({
+          message:"No user found"
+         })
+      }
+      res.json({
+         firstname:result.firstname,
+         lastname:result.lastname
+      })
+})
+
+router.get('/',authMiddleware,async(req,res)=>{
+         
+     res.json({
+      message:"valid user",
+       value:1
+     })
+})
+
 
 
 module.exports =router

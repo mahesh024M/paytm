@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function Signup(){
-
+    
     return (
         <div>
             <SignupPage/>
@@ -19,6 +19,8 @@ function SignupPage(){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+
+    
 
     async function signup(){
         try {
