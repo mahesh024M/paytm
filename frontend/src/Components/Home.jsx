@@ -12,7 +12,7 @@ export default function Home() {
             navigate('/signup');
         }
 
-        axios.get("http://localhost:7000/api/v1/user/",{
+        axios.get("http://localhost:10000/api/v1/user/",{
             headers:{
                 Authorization: "Bearer "+ localStorage.getItem("token")
             }
