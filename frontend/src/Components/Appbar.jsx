@@ -3,7 +3,7 @@
 
 export default function Appbar({firstname}){
       
-       
+      //Appbar 
       return(
          <div className="flex justify-between h-14 shadow">
              <div className="font-bold text-2xl flex flex-col h-full ml-4 justify-center ">Payments App</div>
