@@ -1,6 +1,6 @@
 
 const { connect, Schema, model } =require( 'mongoose');
-const {DB_URL}=require('./config')
+const DB_URL=process.env.DB_URL
 
 connect(DB_URL);
 const userSchema=new Schema({

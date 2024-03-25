@@ -3,7 +3,7 @@ const { authMiddleware } = require('../middleware');
 const {Account}=require('../db')
 const {User} = require('../db' )
 const z=require('zod')
-const {JWT_SECRET} =require('../config') 
+const JWT_SECRET=process.env.JWT_SECRET
 const jwt= require('jsonwebtoken')
 
 
