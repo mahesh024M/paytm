@@ -22,7 +22,7 @@ export default function SendMoney(){
             <div className=""> <input onChange={(e)=>setAmount(e.target.value)} className="w-full rounded-md border-2 p-1" placeholder="Enter amount" type="number" /></div>
             <div className="flex justify-center mt-5"><button onClick={async()=>{
                          try{
-                          await axios.post("http://localhost:10000/api/v1/account/transfer",{
+                          await axios.post("https://paytm-app-8egh.onrender.com/api/v1/account/transfer",{
                               amount:amount,
                               to:data.id
                           },{

@@ -9,7 +9,7 @@ export default function Users(){
    const [filter,setFilter]=useState("");
   
    useEffect(()=>{
-       axios.get(`http://localhost:10000/api/v1/user/bulk?filter=${filter}`)
+       axios.get(`https://paytm-app-8egh.onrender.com/api/v1/user/bulk?filter=${filter}`)
        .then((response)=>{
            
            setUsers(response.data.user);

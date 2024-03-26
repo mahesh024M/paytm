@@ -11,7 +11,7 @@ export default function Dashboard(){
     const [firstname,setFirstname]=useState("");
     useEffect(()=>{
         
-     axios.get("http://localhost:10000/api/v1/account/balance",{
+     axios.get("https://paytm-app-8egh.onrender.com/api/v1/account/balance",{
             headers:{
                 Authorization: "Bearer "+ localStorage.getItem("token")
             }
@@ -20,7 +20,7 @@ export default function Dashboard(){
              setBalance(res.data.balance);
          })
 
-         axios.get("http://localhost:10000/api/v1/user/getuser",{
+         axios.get("https://paytm-app-8egh.onrender.com/api/v1/user/getuser",{
             headers:{
                 Authorization: "Bearer "+ localStorage.getItem("token")
             }
